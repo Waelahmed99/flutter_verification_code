@@ -214,12 +214,12 @@ class _VerificationCodeState extends State<VerificationCode> {
   List<Widget> _buildListWidget() {
     List<Widget> listWidget = [];
     for (int index = 0; index < widget.length; index++) {
-      double left = (index == 0) ? 0.0 : (widget.itemSize / 10);
+      // double left = (index == 0) ? 0.0 : (widget.itemSize / 10);
       listWidget.add(
         Container(
           height: widget.itemSize,
           width: widget.itemSize,
-          margin: EdgeInsets.only(left: left),
+          margin: EdgeInsets.symmetric(horizontal: widget.itemSize / 20),
           padding: widget.contentPadding,
           decoration: widget.decoration,
           child: _buildInputItem(index),
